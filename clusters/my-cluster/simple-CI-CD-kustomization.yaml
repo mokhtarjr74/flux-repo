@@ -11,7 +11,7 @@ spec:
   retryInterval: 2m0s
   sourceRef:
     kind: GitRepository
-    name: simple-ci-cd
+    name: simple-CI-CD
   targetNamespace: task
   timeout: 3m0s
   wait: true
