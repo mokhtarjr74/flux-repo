@@ -12,6 +12,5 @@ spec:
   sourceRef:
     kind: GitRepository
     name: simple-ci-cd
-  targetNamespace: task
   timeout: 4m0s
   wait: true
