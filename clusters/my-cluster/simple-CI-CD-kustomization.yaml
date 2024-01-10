@@ -14,8 +14,8 @@ spec:
     name: simple-ci-cd
   timeout: 3m0s
   wait: true
-  resources:
-    - namespace-nginx-ingress-controller.yaml
-    - configmap-nginx-ingress-controller-helm-chart-value-overrides.yaml
-    - HelmRelease.yaml
-    - helmrepository-bitnami.yaml
+  dependsOn:
+    - name: nginx-ingress-controller
+      namespace: ingress-nginx
+      kind: HelmRelease
+      version: helm.toolkit.fluxcd.io/v2beta1
