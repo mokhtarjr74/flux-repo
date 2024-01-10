@@ -4,18 +4,22 @@ metadata:
   name: nginx-ingress-controller
   namespace: ingress-nginx
 spec:
+  releaseName: nginx-ingress
   chart:
     spec:
-      chart: nginx-ingress-controller
-      version: 9.10.0
+      chart: nginx-ingress
+      version: 4.0.13
       sourceRef:
         kind: HelmRepository
-        name: bitnami
+        name: nginx-stable
         namespace: flux-system
-  interval: 15m
-  timeout: 5m
-  releaseName: nginx-ingress-controller
-  valuesFrom:
-  - kind: ConfigMap
-    name: nginx-ingress-controller-helm-chart-value-overrides
-    valuesKey: values.yaml # This is the default, but best to be explicit for clarity
+  values:
+    controller:
+      service:
+        type: LoadBalancer
+      publishService:
+        enabled: true
+      ingressClassResource:
+        default: true
+    defaultBackend:
+      enabled: true
