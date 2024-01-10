@@ -14,3 +14,8 @@ spec:
     name: simple-ci-cd
   timeout: 4m0s
   wait: true
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: nginx-ingress-controller
+      namespace: nginx-ingress-controller
