@@ -5,12 +5,12 @@ metadata:
   name: simple-ci-cd
   namespace: flux-system
 spec:
-  interval: 2m0s
+  interval: 1m
   path: ./k8s
   prune: true
-  retryInterval: 3m0s
+  retryInterval: 2m0s
   sourceRef:
     kind: GitRepository
     name: simple-ci-cd
-  timeout: 4m0s
+  timeout: 3m0s
   wait: true
