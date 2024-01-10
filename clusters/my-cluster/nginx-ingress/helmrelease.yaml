@@ -8,7 +8,7 @@ spec:
   chart:
     repository: https://charts.bitnami.com/bitnami
     name: nginx-ingress-controller
-    version: 10.3.0
+    version: 9.10.0
   values:
     controller:
       service:
