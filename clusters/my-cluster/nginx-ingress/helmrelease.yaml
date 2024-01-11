@@ -8,10 +8,11 @@ spec:
   chart:
     spec:
       chart: nginx-ingress-controller
-      version: 4.0.3
+      version: 9.10.0
       sourceRef:
         kind: HelmRepository
         name: nginx-ingress-controller
+        namespace: flux-system
   releaseName: nginx-ingress-controller
   values:
     controller:
