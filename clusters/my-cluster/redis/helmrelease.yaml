@@ -4,6 +4,7 @@ metadata:
   name: redis
   namespace: task
 spec:
+  interval: 5m
   releaseName: redis
   chart:
     spec:
