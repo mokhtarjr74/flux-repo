@@ -1,0 +1,17 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: redis
+  namespace: task
+spec:
+  releaseName: redis
+  chart:
+    repository: https://charts.bitnami.com/bitnami
+    name: redis
+    version: 18.6.3
+  values:
+    auth:
+      enabled: false
+    master:
+      persistence:
+        enabled: false
