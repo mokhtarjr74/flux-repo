@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nginx-ingress
+  name: nginx-ingress-controller
   namespace: ingress-nginx
 spec:
   interval: 5m
@@ -13,11 +13,4 @@ spec:
         kind: HelmRepository
         name: bitnami
         namespace: flux-system
-  releaseName: nginx-ingress
-  values:
-    controller:
-      service:
-        enabled: true
-        type: NodePort
-        ports:
-          http: 80
+  releaseName: nginx-ingress-controller
