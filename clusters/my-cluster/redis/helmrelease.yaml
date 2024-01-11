@@ -15,3 +15,4 @@ spec:
     master:
       persistence:
         enabled: false
+
