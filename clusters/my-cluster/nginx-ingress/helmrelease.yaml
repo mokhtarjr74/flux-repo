@@ -18,6 +18,6 @@ spec:
     controller:
       service:
         enabled: true
-        type: LoadBalancer
+        type: NodePort
         ports:
           http: 80
