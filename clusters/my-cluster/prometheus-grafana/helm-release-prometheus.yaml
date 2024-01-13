@@ -14,9 +14,9 @@ spec:
         namespace: flux-system
   releaseName: prometheus
   values:
-    prometheus-grafana:
+    grafana:
       service:
         type: NodePort
-    prometheus-kube-prometheus-prometheus:
+    kube-prometheus-prometheus:
       service:
         type: NodePort
