@@ -13,3 +13,10 @@ spec:
         name: prometheus-community
         namespace: flux-system
   releaseName: prometheus
+  values:
+    prometheus-grafana:
+      service:
+        type: NodePort
+    prometheus-kube-prometheus-prometheus:
+      service:
+        type: NodePort
