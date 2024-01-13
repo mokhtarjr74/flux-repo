@@ -8,7 +8,8 @@ metadata:
   namespace: monitoring
 spec:
   rules:
-  - http:
+  - host: prometheus.com
+    http:
       paths:
       - path: /prometheus
         pathType: Prefix
@@ -28,7 +29,8 @@ metadata:
   namespace: monitoring
 spec:
   rules:
-  - http:
+  - host: grafana.com
+    http:
       paths:
       - path: /grafana
         pathType: Prefix
