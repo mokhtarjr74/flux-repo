@@ -17,6 +17,6 @@ spec:
     grafana:
       service:
         type: NodePort
-    kube-prometheus-prometheus:
+    prometheus:
       service:
         type: NodePort
