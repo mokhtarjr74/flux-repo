@@ -2,7 +2,8 @@ apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
   name: django-app-monitor
-  namespace: task
+  labels:
+    release: prometheus
 spec:
   selector:
     matchLabels:
