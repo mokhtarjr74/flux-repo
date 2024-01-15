@@ -4,7 +4,7 @@ metadata:
   name: django-app-monitor
   labels:
     release: prometheus
-  namespace: task
+  namespace: monitoring
 spec:
   selector:
     matchLabels:
