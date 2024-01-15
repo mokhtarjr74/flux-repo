@@ -24,3 +24,5 @@ spec:
       serviceMonitorNamespaceSelector:
         matchNames:
           - task
+          - ingress-nginx
+          - postgres-operator
