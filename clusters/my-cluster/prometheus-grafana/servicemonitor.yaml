@@ -13,3 +13,18 @@ spec:
     - interval: 30s
       port: app
       path: /metrics
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: postgres-exporter
+  labels:
+    release: prometheus
+  namespace: postgres-operator
+spec:
+  selector:
+    matchLabels:
+      app: postgres-exporter
+  endpoints:
+    - port: postgres
+      interval: 15s
