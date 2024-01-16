@@ -30,7 +30,7 @@ spec:
       interval: 15s
 ---
 apiVersion: monitoring.coreos.com/v1
-kind: Prometheus
+kind: ServiceMonitor
 metadata:
   name: prometheus
   namespace: monitoring
