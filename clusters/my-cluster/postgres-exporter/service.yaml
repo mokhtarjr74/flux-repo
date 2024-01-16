@@ -3,6 +3,8 @@ kind: Service
 metadata:
   name: postgres-exporter
   namespace: postgres-operator
+  labels:
+    app: postgres-exporter
 spec:
   selector:
     app: postgres-exporter

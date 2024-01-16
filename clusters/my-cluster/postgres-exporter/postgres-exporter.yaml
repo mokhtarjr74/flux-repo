@@ -17,10 +17,10 @@ spec:
         - name: postgres-exporter
           image: bitnami/postgres-exporter:latest
           env:
-            - name: DATA_SOURCE_NAME
+            - name: DATA_SOURCE_URI
               valueFrom:
                 secretKeyRef:
                   name: hippo-pguser-hippo
-                  key: jdbc-uri
+                  key: uri
           ports:
             - containerPort: 9187
