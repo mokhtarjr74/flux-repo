@@ -17,10 +17,11 @@ spec:
         - name: postgres-exporter
           image: bitnami/postgres-exporter:latest
           env:
-            - name: DATA_SOURCE_URI
+            - name: DATA_SOURCE_NAME
+              # get values from secret named "hippo-pguser-hippo" in the same namespace
               valueFrom:
                 secretKeyRef:
                   name: hippo-pguser-hippo
-                  key: uri
+                  key: jdbc-uri
           ports:
             - containerPort: 9187
