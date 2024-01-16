@@ -14,3 +14,9 @@ spec:
         name: bitnami
         namespace: flux-system
   releaseName: nginx-ingress-controller
+  values:
+    controller:
+      service:
+        annotations:
+          prometheus.io/scrape: "true"
+          prometheus.io/port: "10254"
