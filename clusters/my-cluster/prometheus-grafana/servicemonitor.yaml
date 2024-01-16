@@ -28,12 +28,3 @@ spec:
   endpoints:
     - port: postgres
       interval: 15s
----
-apiVersion: monitoring.coreos.com/v1
-kind: ServiceMonitor
-metadata:
-  name: prometheus
-  namespace: monitoring
-spec:
-  serviceMonitorSelector: {}
-
